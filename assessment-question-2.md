@@ -164,4 +164,4 @@ You can compare the similarity score using a simple numpy dot product and norms 
             np.array(vector_2[0]['vector'])
         )
         print(f'{score}')
-    ```
+```
