@@ -32,3 +32,4 @@ cargo run
     | Local  | 10       | 5139205734835954 | Active | "france"     |
     +--------+----------+------------------+--------+--------------+
     ```
+### Another example [using Python](https://github.com/victoralfred/qdrant-assessment)

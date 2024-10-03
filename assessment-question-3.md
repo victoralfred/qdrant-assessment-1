@@ -25,9 +25,9 @@ If your goal is to find content that relates to both "apples" and "pears," it’
 Qdrant, as a vector search engine, supports several search techniques that can be applied to different types of use cases. Each technique offers a unique approach to searching and retrieval, based on specific requirements for data exploration, context, and recommendations. Here’s a breakdown of the mentioned techniques along with their use cases, advantages, and limitations.
 
 #### 1. Discovery Search
-<b>Use Case</b>: Discovery search is used when you want to explore a dataset and find patterns, anomalies, or content that may not be immediately obvious. This technique is particularly useful for:
- - Data exploration: Uncovering new, previously unknown information or connections between entities.
- - Unsupervised learning: Grouping related documents, images, or entities based on their vector embeddings, often without any specific query.
+<b>Use Case</b>: [Discovery search](https://qdrant.tech/articles/vector-similarity-beyond-search/#discovery) is used when you want to explore a dataset and find patterns, anomalies, or content that may not be immediately obvious. This technique is particularly useful for:
+ - **Data exploration**: Uncovering new, previously unknown information or connections between entities.
+ - **Unsupervised learning**: Grouping related documents, images, or entities based on their vector embeddings, often without any specific query.
 
 ##### Advantages:
 - Helps in uncovering latent insights within datasets.
@@ -40,7 +40,7 @@ Qdrant, as a vector search engine, supports several search techniques that can b
 - During initial research or exploratory data analysis.
 
 #### 2. Contextual Search
-<b>Use case</b>: Contextual search leverages semantic relationships between terms or concepts. It goes beyond keyword matching by capturing the meaning and context of the search query, making it ideal for:
+<b>Use case</b>: [Contextual search](https://qdrant.tech/articles/discovery-search/#context-search) leverages semantic relationships between terms or concepts. It goes beyond keyword matching by capturing the meaning and context of the search query, making it ideal for:
 - <b>Natural language understanding</b>: Finding results based on the underlying meaning of a query rather than exact keywords.
 - <b>Complex queries</b>: Handling long-form queries where the context matters (e.g., "What are the health benefits of apples in diets?").
 - <b>Knowledge retrieval</b>: Retrieving documents or entities based on their relevance to the query’s context, not just word similarity.
@@ -57,7 +57,7 @@ Qdrant, as a vector search engine, supports several search techniques that can b
 - Useful in research, customer support, or any scenario where the context of the query plays a crucial role.
 
 #### 3. Nearest Neighbor Search
-<b>Use Case</b>: Nearest neighbor search is the core of most vector-based search engines, including Qdrant. It finds the closest vectors to the query vector based on a predefined distance metric (e.g., cosine similarity, Euclidean distance). Common use cases include:
+<b>Use Case</b>: [Nearest neighbor search](https://qdrant.tech/documentation/concepts/search/#similarity-search) is the core of most vector-based search engines, including Qdrant. It finds the closest vectors to the query vector based on a predefined distance metric (e.g., cosine similarity, Euclidean distance). Common use cases include:
 
 - <b>Text or image search</b>: Finding the most similar documents, images, or entities.
 Search by example: Users submit an example item, and the system retrieves similar items.
@@ -86,10 +86,12 @@ Works well with collaborative filtering and content-based filtering for diverse 
 - Can be limited in diversity, leading to filter bubbles (i.e., reinforcing the same type of content).
 ##### When to Use:
 - When personalization is key, such as in e-commerce, media streaming, or news recommendation platforms.
-- Ideal when user preferences can be inferred from prior interactions.
+- Ideal when user preferences can be inferred from prior interactions.\
+
+For more information please refer to the [Recommendation API](https://qdrant.tech/documentation/concepts/explore/#recommendation-api)
 
 #### 5. Hybrid Search
-**Use Case**: A combination of vector search and traditional keyword-based or metadata search, where you use both embeddings and structured data for more comprehensive searches. For example:
+**Use Case**: [Hibrid search](https://qdrant.tech/documentation/concepts/hybrid-queries/#hybrid-and-multi-stage-queries) is a combination of vector search and traditional keyword-based or metadata search, where you use both embeddings and structured data for more comprehensive searches. For example:
 - E-commerce search: Use vector search to find similar products but filter by categories or price ranges using structured data.
 - Multimodal search: Combining text and image vectors, or using vectors alongside metadata (like dates, tags, or categories).
 
@@ -104,7 +106,7 @@ Works well with collaborative filtering and content-based filtering for diverse 
 - Useful in complex search systems where users want both relevant and filtered results (e.g., product search by similarity but also by price range).
 
 #### 6. Fuzzy Search
-**Use Case**: Fuzzy search helps find results that are similar to, but not exact matches to, the query. It is useful in cases where:
+**Use Case**: [Fuzzy search or Random sampling](https://qdrant.tech/documentation/concepts/search/#random-sampling) helps find results that are similar to, but not exact matches to, the query. It is useful in cases where:
 - Misspellings: The user makes typographical errors in their query.
 - Approximate matches: The query does not need to match the content exactly but should capture a general idea.
 
