@@ -7,9 +7,9 @@
 
     [Discord channel link](https://discord.com/channels/907569970500743200/1193336069987516476/1286871212601114758)
 
-    Examples
+    [Examples](util.rs)
 
-    Given the response of a SearchResponse of a [Similarity Search](https://qdrant.tech/documentation/concepts/search/#search-api) e.g;
+    Given the SearchResponse from using the [Similarity Search API](https://qdrant.tech/documentation/concepts/search/#search-api) e.g;
 
     ```rust
     pub async fn query_point(
