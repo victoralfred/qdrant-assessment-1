@@ -7,7 +7,7 @@
 
     [Discord channel link](https://discord.com/channels/907569970500743200/1193336069987516476/1286871212601114758)
 
-    [Examples](src/util.rs)
+    [Examples](util.rs)
 
     Given the SearchResponse from using the [Similarity Search API](https://qdrant.tech/documentation/concepts/search/#search-api) e.g;
 
@@ -118,9 +118,10 @@
     ``` 	
 
 3.  Is there a way to retrieve the similarity score between two specific points?
+    
+    You can do this by writing custom scripts. This is an example using a custom Python script, e.g;
 
-    Examples
-    - If you have two [Points](https://qdrant.tech/documentation/concepts/points/#point-ids);
+- If you have two [Points](https://qdrant.tech/documentation/concepts/points/#point-ids);
 
         ```bash
         vector_1=[{
@@ -145,8 +146,9 @@
             'shard_key': 'netherland'
             }]
         ```
-        You can compare the similarity score using a simple numpy dot product and norms of the vectors, e.g;
-        ```python
+You can compare the similarity score using a simple numpy dot product and norms of the vectors, e.g;
+
+```python
         import numpy as np
 
         def cosine_similarity(vector1, vector2):
@@ -161,4 +163,4 @@
             np.array(vector_2[0]['vector'])
         )
         print(f'{score}')
-        ```
+    ```
