@@ -7,7 +7,7 @@
 
     [Discord channel link](https://discord.com/channels/907569970500743200/1193336069987516476/1286871212601114758)
 
-    [Examples](util.rs)
+    [Examples](src/util.rs)
 
     Given the SearchResponse from using the [Similarity Search API](https://qdrant.tech/documentation/concepts/search/#search-api) e.g;
 
