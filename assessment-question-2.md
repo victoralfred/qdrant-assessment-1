@@ -2,7 +2,7 @@
 
 1.    Sorting Order: Is there a way to reverse the order of query results? We haven’t been able to find an asc/desc order parameter in the scroll, search, discover, or query APIs. Could you clarify if this functionality is supported?
 2.    <i><ins>Sorting by Payload Key: We would like to sort query results by custom fields like date (stored in the payload). While we understand sorting by payload keys is possible (e.g., query=models.OrderByQuery(order_by="date")), is it possible to add a secondary condition to sort by score? Specifically, we want to prefetch sorted by date and then refine the results sorted by score.</ins></i>
--   Potential Feature request
+-   Potential Feature request (must=[models.FieldCondition(key="year", range=models.Range(gte=2000))] [Query)[https://qdrant.tech/documentation/tutorials/search-beginners/#narrow-down-the-query]
 
 
     [Discord channel link](https://discord.com/channels/907569970500743200/1193336069987516476/1286871212601114758)
